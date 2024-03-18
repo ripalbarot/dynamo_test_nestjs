@@ -12,7 +12,7 @@ import { NewBook } from '../domains/newBook.dto';
 import { BOOK_SERVICE, IBookService } from '../services/IBook.service';
 import { Book } from '../domains/book.dto';
 
-@Controller()
+@Controller('/books')
 export class AppController {
   constructor(
     @Inject(BOOK_SERVICE) private readonly bookService: IBookService,
