@@ -19,8 +19,12 @@ export class AppController {
   ) {}
 
   @Get()
-  index(): string {
-    return 'findAll';
+  index(): Book {
+    const book = new Book();
+    book.pk = 'BOOK#123456789';
+    book.book_title = 'Test Title';
+    book.isbn = '1234567890';
+    return book;
   }
   @Post()
   @UsePipes(new ValidationPipe({ transform: true }))
